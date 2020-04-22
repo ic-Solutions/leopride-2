@@ -17,6 +17,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="{{ site.baseurl }}/assets/vendor/jquery/jquery.min.js"></script>
   <script src="{{ site.baseurl }}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/slick/slick.min.js"></script>
 
   <script>
     $(document).ready(function() {
@@ -32,20 +33,30 @@ $(window).resize(function(){
          $(this).parent().find(".dropdown-menu").toggleClass("show"); 
        });
 
-        // hide the menu when the mouse leaves the dropdown
-      $( ".navbar .dropdown-menu" ).mouseleave(function() {
-        $(this).removeClass("show");  
-      });
-  
-    // do something here
-  } 
-});  
-  
-  
-
-// document ready  
+          // hide the menu when the mouse leaves the dropdown
+        $( ".navbar .dropdown-menu" ).mouseleave(function() {
+          $(this).removeClass("show");  
+        });
+    
+      // do something here
+    } 
+  });  
 });
-  </script>
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('.slick-slider').slick({
+        accessibility: true,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slickPlay: true
+    });
+  });
+</script>
+
 </body>
 
 </html>
