@@ -1,0 +1,35 @@
+---
+---
+
+@charset "utf-8";
+
+
+$base-ff: 'Poppins', sans-serif;
+
+$theme-colors: (
+  "primary": {{site.color-scheme}}
+);
+
+$brand-color: #fcd21c;
+$text-color: #555;
+
+// Width of the content area
+$content-width: 800px;
+$on-palm: 600px;
+$on-laptop: 800px;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,900;1,400;1,600&display=swap');
+@import "bootstrap/bootstrap";
+@import "style", "custom";

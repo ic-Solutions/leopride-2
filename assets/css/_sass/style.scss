@@ -1,0 +1,31 @@
+
+html, body {
+	font-family: $base-ff;
+}
+
+
+
+
+.navbar {
+  padding: 0;
+  @include media-query($on-palm) {
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+.nav-item {
+	font-weight: bold;
+	height: 5em;
+	line-height: 4em;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+		color: $text-color;
+}
+
+
+.tall-nav {
+  padding: 1rem 1rem;
+}
+
