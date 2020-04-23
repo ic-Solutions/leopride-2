@@ -67,32 +67,43 @@
 </script>
 
 
+<!-- Run counter on reaching the counter section -->
 <script>
-$('.count').each(function() {
-  var $this = $(this),
-      countTo = $this.attr('data-counter');
-  
-  $({ countNum: $this.text()}).animate({
-    countNum: countTo
-  },
+  $(window).scroll(function() {
+   var hT = $('#counter').offset().top,
+       hH = $('#counter').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+   if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
+    $('.count').each(function() {
+      var $this = $(this),
+          countTo = $this.attr('data-counter');
+      
+      $({ countNum: $this.text()}).animate({
+        countNum: countTo
+      },
 
-  {
+      {
 
-    duration: 8000,
-    easing:'linear',
-    step: function() {
-      $this.text(Math.floor(this.countNum));
-    },
-    complete: function() {
-      $this.text(this.countNum);
-      //alert('finished');
-    }
+        duration: 3000,
+        easing:'linear',
+        step: function() {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function() {
+          $this.text(this.countNum);
+          //alert('finished');
+        }
+      });
+    });
 
-  });  
-  
-  
-
+   }
 });
+</script>
+
+
+<script>
+
 </script>
 
 
