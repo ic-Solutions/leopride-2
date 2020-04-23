@@ -29,3 +29,152 @@ html, body {
   padding: 1rem 1rem;
 }
 
+.paper {
+	border-radius: 10px;
+	background: #fff;
+	padding: 60px 25px;
+	margin-bottom: 40px;
+	text-align: center;
+	transition: all 300ms linear 0s;
+	box-shadow: 0px 0px 30px 0px rgba(186, 184, 191, 0.35);
+}
+
+
+.pt-8 {
+	padding-top: 8em;
+}
+
+
+.workflow_bg {
+	overflow: hidden;
+	background: url("/assets/images/workflow-bg.png") no-repeat top right;
+	padding: 110px 0;
+}
+
+
+.workflow_item {
+	position: relative;
+	.icons {
+		margin-bottom: 1em;
+	}
+	a {
+		color: $text-color;
+		font-size: 1.6em;
+		font-weight: 600;
+	}
+
+	.badge {
+		position:absolute;
+		top: 10px;
+		left: 10px;
+		font-size: 1em;
+	}
+}
+
+
+
+.icons {
+	margin: 0 auto;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	box-shadow: 0px 12px 32px 0px rgba(140, 140, 140, 0.35);
+	border: 10px solid;
+}
+
+
+
+.icons_green {
+	background-image: -moz-linear-gradient(-47deg, #58fe5f 0%, #9cfdfa 100%);
+	background-image: -webkit-linear-gradient(-47deg, #58fe5f 0%, #9cfdfa 100%);
+	background-image: -ms-linear-gradient(-47deg, #58fe5f 0%, #9cfdfa 100%);
+	border-color: #edfff1;
+}
+
+.icons_yellow {
+	background-image: -moz-linear-gradient(-47deg, #ffe233 0%, #ffed80 100%);
+	background-image: -webkit-linear-gradient(-47deg, #ffe233 0%, #ffed80 100%);
+	background-image: -ms-linear-gradient(-47deg, #ffe233 0%, #ffed80 100%);
+	border-color: #edfff1;
+}
+
+.icons_purple {
+	background-image: -moz-linear-gradient(134deg, #2a75f5 0%, #a962f8 100%);
+	background-image: -webkit-linear-gradient(134deg, #2a75f5 0%, #a962f8 100%);
+	background-image: -ms-linear-gradient(134deg, #2a75f5 0%, #a962f8 100%);
+	border-color: #f7f2ff;
+}
+
+.icons_red {
+	background-image: -moz-linear-gradient(134deg, #fc6ddc 0%, #fe3b2b 100%);
+	background-image: -webkit-linear-gradient(134deg, #fc6ddc 0%, #fe3b2b 100%);
+	background-image: -ms-linear-gradient(134deg, #fc6ddc 0%, #fe3b2b 100%);
+	border-color: #fff2f2;
+}
+
+
+
+.title {
+	font-size: 3em;
+	font-weight: 900;
+	padding: 10px;
+	margin-bottom: 0.5em;
+}
+
+.title_bg {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background-color: $brand-color;
+}
+
+.title_brush {
+	&:before {
+		content: '';
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+		right: -134px;
+		width: 134px;
+		-webkit-mask-image: url(/assets/images/right-painting.png);
+		mask-image: url(/assets/images/right-painting.png);
+		-webkit-mask-position: left top;
+		mask-position: left top;
+		background-color: $brand-color;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+		left: -40px;
+		width: 46px;
+		-webkit-mask-image: url(/assets/images/left-painting.png);
+		mask-image: url(/assets/images/left-painting.png);
+		-webkit-mask-position: left top;
+		mask-position: left top;
+		background-color: $brand-color;
+	}
+}
+
+.subtitle {
+	font-size: 2.5em;
+}

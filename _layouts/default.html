@@ -8,9 +8,7 @@
 <body>
   {% include navigation.html %} {% include header.html %}
   <!-- Page Content -->
-  <div class="container mb-5">
     {{ content }}
-  </div>
   <!-- /.container -->
   {% include footer.html %}
 
@@ -22,25 +20,24 @@
   <script>
     $(document).ready(function() {
  // executes when HTML-Document is loaded and DOM is ready
+    // breakpoint and up  
+    $(window).resize(function(){
+      if ($(window).width() >= 980){  
 
-// breakpoint and up  
-$(window).resize(function(){
-  if ($(window).width() >= 980){  
+          // when you hover a toggle show its dropdown menu
+          $(".navbar .dropdown-toggle").hover(function () {
+             $(this).parent().toggleClass("show");
+             $(this).parent().find(".dropdown-menu").toggleClass("show"); 
+           });
 
-      // when you hover a toggle show its dropdown menu
-      $(".navbar .dropdown-toggle").hover(function () {
-         $(this).parent().toggleClass("show");
-         $(this).parent().find(".dropdown-menu").toggleClass("show"); 
-       });
-
-          // hide the menu when the mouse leaves the dropdown
-        $( ".navbar .dropdown-menu" ).mouseleave(function() {
-          $(this).removeClass("show");  
-        });
-    
-      // do something here
-    } 
-  });  
+              // hide the menu when the mouse leaves the dropdown
+            $( ".navbar .dropdown-menu" ).mouseleave(function() {
+              $(this).removeClass("show");  
+            });
+        
+          // do something here
+        } 
+      });  
 });
 </script>
 
@@ -49,13 +46,26 @@ $(window).resize(function(){
     $('.slick-slider').slick({
         accessibility: true,
         arrows: false,
+        dots: true,
         infinite: true,
         speed: 300,
-        slidesToShow: 1,
         slickPlay: true
     });
   });
 </script>
+
+
+<!-- Load fontawesome.css -->
+<script>
+(function() {
+    var css = document.createElement('link');
+    css.href = '/assets/vendor/fontawesome/css/all.min.css';
+    css.rel = 'stylesheet';
+    css.type = 'text/css';
+    document.getElementsByTagName('head')[0].appendChild(css);
+})();
+</script>
+
 
 </body>
 
