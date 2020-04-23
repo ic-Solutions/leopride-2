@@ -87,7 +87,11 @@ html, body {
 	border: 10px solid;
 }
 
-
+.icons_small {
+	width: 60px;
+	height: 60px;
+	border: 6px solid;
+}
 
 .icons_green {
 	background-image: -moz-linear-gradient(-47deg, #58fe5f 0%, #9cfdfa 100%);
@@ -100,7 +104,7 @@ html, body {
 	background-image: -moz-linear-gradient(-47deg, #ffe233 0%, #ffed80 100%);
 	background-image: -webkit-linear-gradient(-47deg, #ffe233 0%, #ffed80 100%);
 	background-image: -ms-linear-gradient(-47deg, #ffe233 0%, #ffed80 100%);
-	border-color: #edfff1;
+	border-color: #fff9e4;
 }
 
 .icons_purple {

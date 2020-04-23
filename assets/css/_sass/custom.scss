@@ -5,11 +5,11 @@
 
 /* adds some margin below the link sets  */
 .navbar .dropdown-menu div[class*="col"] {
-   margin-bottom:1rem;
+   margin-bottom: 1rem;
 }
 
 .navbar .dropdown-menu {
-  border:none;
+  border: none;
   // background-color: $brand-color !important;
 }
 
@@ -25,24 +25,22 @@
 /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
 
 /* makes the dropdown full width  */
-.navbar .dropdown {position:static;}
+.navbar .dropdown {
+    position:static;
+  }
 
 .navbar .dropdown-menu {
   width:100%;
   left:0;
   right:0;
 /*  height of nav-item  */
-  top: 100%;
+  top: 85%;
   margin: 0;
   display:block;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
-}
-  
- 
-
-  
+} 
   /* shows the dropdown menu on hover */
 .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
   display:block;
@@ -58,7 +56,23 @@
             box-shadow: 0 6px 14px 0 rgba(43,35,79,.1);
   }
 
+  .dropdown-menu  {
+    .nav-item:hover {
+      background: #ccc;
+    }
+    .nav-item:hover .nav-link {
+      color: $text-color !important;
+    }
+  }
+
 }
+
+.navbar-nav .dropdown-menu {
+   @include media-query($on-palm) {
+      position: absolute;
+   }
+}
+
 
 // Slick slider
 .slick-slider {
@@ -67,5 +81,32 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @include media-query($on-palm) {
+      height: 30vh;
+      background-size: contain;
+      background-position: top;
+    }
   }
+
+  .slick-dots  {
+    bottom: 20px;
+
+    li button {
+      &:before {
+        font-size: 10px;
+        opacity: 0.8;
+      }
+    }
+    li button:hover {
+        &:before {
+          color: $brand-color;
+        }
+      }
+    .slick-active button {
+      &:before {
+        color: $brand-color;
+      }
+    }
+  }
+
 }
