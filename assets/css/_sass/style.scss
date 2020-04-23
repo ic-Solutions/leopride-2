@@ -15,7 +15,7 @@ html, body {
 
 
 .nav-item {
-	font-weight: bold;
+	font-weight: 600;
 	height: 5em;
 	line-height: 4em;
 }
@@ -101,9 +101,9 @@ html, body {
 }
 
 .icons_yellow {
-	background-image: -moz-linear-gradient(-47deg, #ffe233 0%, #ffed80 100%);
-	background-image: -webkit-linear-gradient(-47deg, #ffe233 0%, #ffed80 100%);
-	background-image: -ms-linear-gradient(-47deg, #ffe233 0%, #ffed80 100%);
+	background-image: -moz-linear-gradient(-47deg, $brand-color 0%, #ffed80 100%);
+	background-image: -webkit-linear-gradient(-47deg, $brand-color 0%, #ffed80 100%);
+	background-image: -ms-linear-gradient(-47deg, $brand-color 0%, #ffed80 100%);
 	border-color: #fff9e4;
 }
 
