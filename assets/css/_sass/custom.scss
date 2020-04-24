@@ -113,3 +113,28 @@
     font-size: 2em;
     color: $h-color;
 }
+
+.social {
+  li {
+    &:hover {
+      background: $text-color;
+    }
+  }
+  li:hover .fab {
+    color: $brand-color !important;
+  }
+  .fab {
+    font-size: 28px;
+    margin-top: 8px;
+  }
+}
+
+footer {
+  a {
+    color: $text-color !important;
+    &:hover {
+      color: $brand-color !important;
+      text-decoration: none;
+    }
+  }
+}
