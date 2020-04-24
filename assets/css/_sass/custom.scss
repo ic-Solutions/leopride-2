@@ -138,3 +138,49 @@ footer {
     }
   }
 }
+
+
+.testimonials {
+  .shape-shadow {
+    border-radius: 10px;
+    background-color: #fff;
+    opacity: .4;
+    -webkit-box-shadow: 0 20px 50px 0 rgba(102,74,74,.2);
+    box-shadow: 0 20px 50px 0 rgba(102,74,74,.2);
+    height: 100px;
+    max-width: 81%;
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .testi-content-inner {
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    -webkit-box-shadow: 0 30px 20px 0 rgba(43,35,79,.05);
+    box-shadow: 0 30px 20px 0 rgba(43,35,79,.05);
+    border-radius: 10px;
+    padding: 50px 60px;
+  }
+  .testimonial-bio {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 43px;
+  }
+  .testimonial-content {
+    margin-bottom: 35px;
+  }
+  .rating {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
