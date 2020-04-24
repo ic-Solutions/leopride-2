@@ -141,6 +141,8 @@ footer {
 
 
 .testimonials {
+  z-index: 0;
+  
   .shape-shadow {
     border-radius: 10px;
     background-color: #fff;
@@ -156,7 +158,7 @@ footer {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: 1;
   }
 
   .testi-content-inner {
@@ -167,6 +169,7 @@ footer {
     box-shadow: 0 30px 20px 0 rgba(43,35,79,.05);
     border-radius: 10px;
     padding: 50px 60px;
+    z-index: 2;
   }
   .testimonial-bio {
     display: flex;
@@ -177,10 +180,26 @@ footer {
   }
   .testimonial-content {
     margin-bottom: 35px;
+    line-height: 1.8;
+  }
+  .avatar {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 30px;
+
+    img {
+      border-radius: 50%;
+    }
   }
   .rating {
     margin: 0;
     padding: 0;
     list-style: none;
+    li {
+      display: inline-block;
+      font-size: 14px;
+      color: $brand-color;
+    }
   }
 }
